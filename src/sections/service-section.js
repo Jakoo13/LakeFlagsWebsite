@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Box, Grid, Text, Heading, Button, Image } from 'theme-ui';
+
+import React, { useState } from 'react';
+import { jsx, Container, Box, Grid, Text, Heading, Button, Image  } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import TextFeature from 'components/text-feature';
 import ModalVideo from 'react-modal-video';
 import { IoIosPlay } from 'react-icons/io';
 
-import ServiceThumb from 'assets/dana.jpeg';
-import shapePattern from 'assets/shape-pattern1.png';
-
-import Smart from 'assets/services/smart.svg';
-import Secure from 'assets/services/secure.svg';
 
 const data = {
   subTitle: 'our services',
@@ -18,7 +15,7 @@ const data = {
   features: [
     {
       id: 1,
-      imgSrc: Smart,
+      imgSrc: 'subscription.svg',
       altText: 'Smart Features',
       title: 'Smart Features',
       text:
@@ -26,7 +23,7 @@ const data = {
     },
     {
       id: 2,
-      imgSrc: Secure,
+      imgSrc: 'performance.svg',
       altText: 'Communication',
       title: 'Communication',
       text:
@@ -44,10 +41,11 @@ export default function ServiceSection() {
   }
 
   return (
-    <section sx={{ variant: 'section.services'}}>
+    <section sx={{ variant: 'section.services'}} id="services">
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
-          <Image src={ServiceThumb} alt="Thumbnail" />
+          
+          <img src="dana.jpeg"  alt="Ski Image" />
           <Button 
             sx={styles.videoBtn}
             onClick={handleClick}
@@ -58,7 +56,7 @@ export default function ServiceSection() {
             </span>
           </Button>
           <Box sx={styles.shapeBox}> 
-            <Image src={shapePattern} alt="shape" />
+            <img src="shape-pattern1.png" alt="shape" />
           </Box>
         </Box>
         <Box sx={styles.contentBox}>
@@ -66,7 +64,7 @@ export default function ServiceSection() {
           <Grid sx={styles.grid}>
             {data.features.map((feature)=> (
               <Box sx={styles.card} key={feature.id}>
-                <Image src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
+                <img src={feature.imgSrc} alt={feature.altText} sx={styles.icon} />
                 <Box sx={styles.wrapper}>
                   <Heading sx={styles.wrapper.title}>{feature.title}</Heading>
                   <Text sx={styles.wrapper.subTitle}>{feature.text}</Text>
@@ -120,6 +118,7 @@ const styles = {
       position: 'relative',
       zIndex: 1,
       height: [310, 'auto'],
+      width: [300, 400, 400, 350, 500, 600]
     },
   },
   shapeBox: {

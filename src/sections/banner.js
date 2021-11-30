@@ -1,14 +1,17 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
-import BannerImg from 'assets/banner-thumb.png';
 import phoneImg from 'assets/banner/LakeFlagsPhone.png'
-import ShapeLeft from 'assets/shape-left.png';
-import ShapeRight from 'assets/shape-right.png';
+import ShapeLeft from '../../public/shape-left.png';
+import ShapeRight from '../../public/shape-right.png';
 
 export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
+      
+      {/* <img src="shape-left.png" sx={styles.banner.imageRight} /> */}
+      {/* <img src="shape-right.png" sx="image-right" /> */}
       <Container sx={styles.banner.container}>
          <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary"> 
@@ -20,7 +23,8 @@ export default function Banner() {
           <Button variant="primary">Explore</Button>
          </Box>
          <Box sx={styles.banner.imageBox}>
-          <Image src={phoneImg} alt="banner" />
+         <img sx={styles.logo} src="/LakeFlagsPhone.png" alt="alt Image" /> 
+          {/* <Image src={phoneImg} alt="banner" /> */}
          </Box>
       </Container>
     </section>
@@ -28,6 +32,7 @@ export default function Banner() {
 }
 
 const styles = {
+  
   banner: {
     pt: ['140px', '145px', '155px', '170px', null, null, '180px', '215px'],
     pb: [2, null, 0, null, 2, 0, null, 5],
@@ -41,7 +46,7 @@ const styles = {
       height: '100%',
       width: '100%',
       zIndex: -1,
-      backgroundImage: `url(${ShapeLeft})`,
+      backgroundImage: `url('shape-left.png')`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: 'bottom left',
       backgroundSize: '36%',
@@ -54,11 +59,39 @@ const styles = {
       height: '100%',
       width: '100%',
       zIndex: -1,
-      backgroundImage: `url(${ShapeRight})`,
+      backgroundImage: `url('/shape-right.png')`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: 'bottom right',
       backgroundSize: '32%',
     },
+    // imageRight: {
+    //   position: "absolute",
+      
+    //   content: '""',
+    //   bottom: '40px',
+    //   right: 0,
+    //   height: '50%',
+    //   width: '50%',
+    //   zIndex: -1,
+      
+    //   backgroundRepeat: `no-repeat`,
+    //   backgroundPosition: 'bottom right',
+    //   backgroundSize: '32%',
+    // },
+    // imageLeft: {
+      
+    //   position: 'absolute',
+
+    //   content: '""',
+    //   bottom: 6,
+    //   left: 0,
+    //   height: '50%',
+    //   width: '50%',
+    //   zIndex: -1,
+    //   backgroundRepeat: `no-repeat`,
+    //   backgroundPosition: 'bottom left',
+    //   backgroundSize: '36%',
+    // },
     container: {
       minHeight: 'inherit',
       display: 'flex',

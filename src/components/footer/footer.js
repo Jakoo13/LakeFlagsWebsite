@@ -1,12 +1,36 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Container, Image, Text } from 'theme-ui';
 import { Link } from 'components/link';
 import data from './footer.data';
-import FooterLogo from 'assets/logo.svg';
+
 
 export default function Footer() {
   return (
-    <h1>Footer</h1>
+    <footer sx={styles.footer}>
+      <Container>
+        <Box sx={styles.footer.footerBottomArea}>
+          <Link path="/">
+            <img sx={styles.footer.image} src="Logo.png" alt="Logo" />
+          </Link>
+          <Box sx={styles.footer.menus}>
+            <nav>
+              {data.menuItem.map((item, i)=> (
+                <Link 
+                  path={item.path}
+                  key={i}
+                  label={item.label}
+                  sx={styles.footer.link}
+                />
+              ))}
+            </nav>
+          </Box>
+          <Text sx={styles.footer.copyright}>
+            Copyright {new Date().getFullYear()} <a href="https://netscaledigital.com" target="_blank">Netscale Digital</a>
+          </Text>
+        </Box>
+      </Container>
+    </footer>
   );
 }
 
@@ -16,7 +40,7 @@ const styles = {
       borderTop: '1px solid',
       borderTopColor: 'border_color',
       display: 'flex',
-      pt: [7, null, 8],
+      pt: [7, null, 0],
       pb: ['40px', null, '100px'],
       textAlign: 'center',
       flexDirection: 'column',
@@ -51,5 +75,8 @@ const styles = {
       fontSize: [1, '15px'],
       width: '100%',
     },
+    image: {
+      width: "200px"
+    }
   },
 };

@@ -1,9 +1,10 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Container, Flex, Button } from 'theme-ui';
 import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import Logo from 'components/logo';
-import LogoDark from 'assets/banner/LakeFlags.png';
+
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
 
@@ -11,7 +12,8 @@ export default function Header({ className }) {
   return (
       <header id="header" sx={styles.header} className={className}>
         <Container sx={styles.container}>
-          <Logo sx={styles.logo} src={LogoDark} />
+          {/* <Logo sx={styles.logo} src={LogoDark} /> */}
+          <img sx={styles.logo} src="/Logo.png" alt="alt Image" /> 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map((menuItem, i)=> (
               <Link 

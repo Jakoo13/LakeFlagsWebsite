@@ -4,20 +4,9 @@ export default {
       path: '/',
       label: 'Home',
     },
+    
     {
-      path: '/',
-      label: 'Adversite',
-    },
-    {
-      path: '/',
-      label: 'Supports',
-    },
-    {
-      path: '/',
-      label: 'Marketing',
-    },
-    {
-      path: '/',
+      path: 'https://netscaledigital.com/contact-us/',
       label: 'Contact',
     },
   ],
