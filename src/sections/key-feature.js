@@ -13,7 +13,7 @@ const data = [
     altText: 'See Everyone',
     title: 'See Everyone',
     text:
-      'Do you ever have a hard time seeing someone\'s flag? Lake Flags eliminates that problem.',
+      'The entire lake queue is in your hand',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const data = [
     altText: 'Fast Notifications',
     title: 'Fast Notifications',
     text:
-      'Get notified right to your device every time their is a flag change. Easily turn these off when you are away.',
+      'Get notified right to your device.',
   },
   {
     id: 3,
@@ -29,16 +29,16 @@ const data = [
     altText: 'Messages',
     title: 'Messages',
     text:
-      'Quickly message another residence. Ask them about their session or how they are doing.',
+      'Quickly message another residence.',
   },
-  {
-    id: 4,
-    imgSrc: 'support.svg',
-    altText: 'Customer Support',
-    title: 'Customer Support',
-    text:
-      'Have issues or questions? Quickly contact us for a fast response.',
-  },
+  // {
+  //   id: 4,
+  //   imgSrc: 'support.svg',
+  //   altText: 'Customer Support',
+  //   title: 'Customer Support',
+  //   text:
+  //     'Have issues or questions? Quickly contact us for a fast response.',
+  // },
 ];
 
 export default function KeyFeature() {
@@ -86,7 +86,7 @@ const styles = {
       null,
       'repeat(2,1fr)',
       null,
-      'repeat(4,1fr)',
+      'repeat(3,1fr)',
     ],
   },
 };

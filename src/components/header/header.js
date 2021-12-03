@@ -7,13 +7,18 @@ import Logo from 'components/logo';
 
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
+import { FaBorderNone } from 'react-icons/fa';
 
 export default function Header({ className }) {
+  const navigateContact = (e) => {
+    e.preventDefault();
+      window.location.href='http://netscaledigital.com/contact-us';
+  }
   return (
       <header id="header" sx={styles.header} className={className}>
         <Container sx={styles.container}>
           {/* <Logo sx={styles.logo} src={LogoDark} /> */}
-          <img sx={styles.logo} src="/Logo.png" alt="alt Image" /> 
+          <img sx={styles.logo} src="/headerLogo.png" alt="alt Image" /> 
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map((menuItem, i)=> (
               <Link 
@@ -29,7 +34,7 @@ export default function Header({ className }) {
               </Link>
             ))}
           </Flex>
-          <Button className="donate__btn" variant="secondary" aria-label="Get Started">
+          <Button className="donate__btn" variant="secondary" aria-label="Get Started" onClick={navigateContact}>
               Get Started
           </Button>
           <MobileDrawer />
@@ -37,6 +42,8 @@ export default function Header({ className }) {
       </header>
   );
 }
+
+
 
 const positionAnim = keyframes`
   from {
@@ -53,7 +60,7 @@ const positionAnim = keyframes`
 
 const styles = {
   logo: {
-    width: "20%",
+    width: [ "40%", "40%", "40%", "15%"],
   },
   header: {
     color: 'text',
@@ -94,6 +101,7 @@ const styles = {
       display: 'block',
     },
     a: {
+     
       fontSize: 2,
       fontWeight: 'body',
       px: 5,

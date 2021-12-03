@@ -7,6 +7,10 @@ import ShapeLeft from '../../public/shape-left.png';
 import ShapeRight from '../../public/shape-right.png';
 
 export default function Banner() {
+  const navigateContact = (e) => {
+    e.preventDefault();
+      window.location.href='http://netscaledigital.com/contact-us';
+  }
   return (
     <section sx={styles.banner} id="home">
       
@@ -15,12 +19,12 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
          <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary"> 
-            Lake Flags <br />A mobile app for ski lakes
+            Lake Flags <br />A Water Ski Rotation App
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Lake Flags allows neighborhoods to replace the manual process of putting a flag out to signal readiness to ski. This is all done through your phone, as well as the ability for one residence to message another residence. 
+            Instantly view and change rotation status and conveniently message others via inner-app chat
           </Text>
-          <Button variant="primary">Explore</Button>
+          <Button onClick={navigateContact} variant="primary">Contact</Button>
          </Box>
          <Box sx={styles.banner.imageBox}>
          <img sx={styles.logo} src="/LakeFlagsPhone.png" alt="alt Image" /> 
