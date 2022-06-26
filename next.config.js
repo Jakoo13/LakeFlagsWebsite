@@ -10,6 +10,7 @@ module.exports = {
   }
 
   module.exports = {
+    trailingSlash: true,
     module: {
       rules: [
         {

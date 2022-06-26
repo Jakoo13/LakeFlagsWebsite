@@ -27,7 +27,7 @@ export default function Banner() {
           <Button onClick={navigateContact} variant="primary">Contact</Button>
          </Box>
          <Box sx={styles.banner.imageBox}>
-         <img sx={styles.logo} src="/LakeFlagsPhone.png" alt="alt Image" /> 
+         <img sx={styles.logo} src="/lake-queue.png" alt="alt Image" /> 
           {/* <Image src={phoneImg} alt="banner" /> */}
          </Box>
       </Container>
@@ -115,9 +115,9 @@ const styles = {
       mb: [0, null, -6, null, null, '-40px', null, -3],
       img: {
 
-        width: "30%",
+        width: ["50%","50%","40%","40%"],
         position: 'relative',
-        height: [245, 'auto'],
+        height: ["auto", 'auto'],
       },
     },
   },
